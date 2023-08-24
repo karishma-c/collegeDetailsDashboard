@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Sidebar from './../Sidebar/Sidebar';
 import Search from "./../Search/Search";
-import Filter from './../Filter/Filter';
+
 import ProductCard from "./../ProductCard/ProductCard";
-import Paginate from "./../Paginate/Paginate";
+
 import './Home.css';
 
 const Home = () => {
