@@ -1,0 +1,62 @@
+.navigationBar {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 80px;
+}
+.logo {
+    width: 40px;
+    height: 40px;
+    margin: 30px 0 50px 0;
+}
+.logoImage, .navImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.navLinksDiv {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: space-between;
+    justify-content: center;
+}
+.topNavLinks, .bottomNavLinks {
+    list-style-type: none;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding: 0;
+}
+.topNavLinks {
+    margin: 0 0 420px 0;
+}
+
+.navLink {
+    width: 34px;
+    height: 34px;
+    margin: 0;
+    padding: 0 0 30px 0;
+}
+
+.loginBtn {
+    padding: 12px 20px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+@media screen and (max-width:500px) {
+
+    .navigationBar {
+        padding: 0 15px;
+    }
+    .navLink {
+        margin: 0 10px;
+    }
+
+}

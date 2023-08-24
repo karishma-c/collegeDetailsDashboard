@@ -1,0 +1,68 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(133, 133, 133, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  height: auto;
+  width: 100%;
+  z-index: 2;
+}
+  
+.modalContent {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  padding:0;
+  background-color: #ffffff;
+  z-index: 5;
+}
+  
+.closeButton {
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  margin: 30px 0;
+  font-size: 25px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: black;
+  border-radius: 50px;
+  padding: 5px 12px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.optionsName {
+  margin: 10px 10px 10px 20px;
+}
+
+.options, .subOptions {
+  font-size: 18px;
+}
+/* .mobileFilterOptions {
+  height: 100%;
+  
+} */
+.mobileSubOptions {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.options {
+  font-weight: 600;
+  margin: 20px 0 10px 20px;
+}
+  
+.bottom{
+  max-width:100%! important;
+  width:100%;
+  position:fixed;
+  bottom:0;
+  padding:16px !important;
+}

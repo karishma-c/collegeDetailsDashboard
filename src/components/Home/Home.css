@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.home {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 100%;
+}
+.mainContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.searchInputField {
+    padding: 10px 8px;
+    border: 1px solid rgb(53, 52, 52);
+}
+.productsContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+}
+.productCardContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.bottomElement {
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #FAFBFC;
+    z-index: 1;
+}
+
+@media (max-width:780px) {
+
+    .productCardContainer {
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    
+    .mainContainer {
+        margin: 50px 30px;
+    }
+
+}
