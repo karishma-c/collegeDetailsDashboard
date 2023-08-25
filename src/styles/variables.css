@@ -1,9 +1,12 @@
 :root {
     --primary-color: #1670EF;
     --secondary-color: #597e8d;
-    --border-color: #bfc5c7;
+    --border-color: #e4ebec;
     --tertiary-color: #eef4fe;
+    --light-bg: #f4f3ff;
     --white-color: #ffffff;
+    --black-color: #000000;
+    --tag-color: #806ae4;
     --font-small-xs: 14px;
     --font-small: 16px;
     --font-small-1: 18px;
@@ -16,4 +19,5 @@
     --font-weight-bold: 700;
     --button-border-radius: 10px;
     --card-border-radius: 5px;
+    --tag-border-radius: 30px;
 }
