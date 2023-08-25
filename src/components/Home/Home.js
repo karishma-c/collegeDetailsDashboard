@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Sidebar from './../Sidebar/Sidebar';
 import Search from "./../Search/Search";
-
+import Watchlist from "./../Watchlist/Watchlist";
 import ProductCard from "./../ProductCard/ProductCard";
 
 import './Home.css';
@@ -13,6 +13,9 @@ const Home = () => {
             <Sidebar />
             <div className="mainContainer">
                 <Search />
+                <div className="innerContainer">
+                    <Watchlist />
+                </div>
             </div>
         </div>
     )
