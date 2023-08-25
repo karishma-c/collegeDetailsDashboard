@@ -5,7 +5,7 @@ var collegeData = [
         major: ["Social Science","Arts"],
         sat: "1501 - 1550",
         act: "33 - 34",
-        achievements: ['Nationalment Commendation','AI Scholar','Leadership'],
+        achievements: ['AI Scholar','Leadership'],
         admission_rate: "800",
         distance: "3.2",
         tuition_fees: "$ 1500"

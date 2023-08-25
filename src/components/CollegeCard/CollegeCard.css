@@ -1,0 +1,127 @@
+@import './../../styles/variables.css';
+
+.collegeCardContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--white-color);
+    border-radius: var(--card-border-radius);
+    margin: 0 0 0 30px;
+    padding: 15px 10px;
+    width: 800px;
+}
+.heading {
+    font-size: var(--font-medium);
+    font-weight: var(--font-weight-medium);
+    margin: 10px 0 0 10px;
+    padding: 0;
+}
+.desc {
+    font-size: var(--font-small-xs);
+    font-weight: var(--font-weight-normal);
+    color: var(--secondary-color);
+    margin: 5px 10px 10px;
+    padding: 0;
+}
+.collegeCardHeader, .containerHeader {
+    width: inherit;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.addCollegeButton {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    border-radius: var(--button-border-radius);
+    border: 1px solid var(--secondary-color);
+    font-size: var(--font-small-xs);
+    padding: 5px 12px;
+    background-color: var(--white-color);
+}
+.collegeCards {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+.headerDetails {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.headerOptions, .admission, .distance, .fees {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.admission, .distance, .fees {
+    margin: 0;
+    padding: 0;
+}
+#headerTickIcon, #addClgIcon {
+    padding: 0 8px 0 0;
+}
+.collegeCard {
+    cursor: pointer;
+    width: 230px;
+    height: 240px;
+    background-color: var(--white-color);
+    border-radius: var(--card-border-radius);
+    border: 1px solid var(--border-color);
+    margin: 0 5px;
+    padding: 20px 15px;
+}
+.collegeCard:hover {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .1);;
+}
+.colName, .colSatHeading, .colActHeading {
+    font-size: var(--font-small-xs);
+    font-weight: var(--font-weight-semibold);
+    margin: 0;
+    padding: 0;
+}
+.colSat, .colAct {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 10px 0;
+}
+.colAct {
+    padding: 0 0 10px 0;
+}
+.collegeCardHeader, .colAct {
+    border-bottom: 2px solid var(--border-color);
+}
+.colSatHeading, .colActHeading, .admissionHeading, .distanceHeading, .feesHeading {
+    font-weight: var(--font-weight-medium);
+    padding: 0 0 2px 0;
+    color: var(--black-color);
+}
+.admissionHeading, .distanceHeading, .feesHeading {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: var(--font-size-xs);
+    margin: 0;
+}
+#admissionIcon, #distanceIcon, #feesIcon {
+    padding: 0 5px 0 0;
+}
+.colCity, .colSatValue, .colActValue, .admissionValue, .distanceValue, .feesValue {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-normal);
+    color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+}
+.colCity {
+    margin: 0 0 10px 0;
+}
+

@@ -6,6 +6,7 @@ const Watchlist = () => {
 
     return (
         <div className="watchlistContainer">
+            <h2 className="watchlistContainerHeader">Watchlist</h2>
             <div className="cardContainer">
                 {
                     data.map(collegeData => {

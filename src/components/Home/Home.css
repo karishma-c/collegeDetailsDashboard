@@ -9,14 +9,25 @@
     max-width: 100%;
     max-height: 100%;
 }
-.mainContainer {
+.bodyContainer {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
 }
-
+.innerContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.innerContainerRight {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
 .searchInputField {
     padding: 10px 8px;
     border: 1px solid rgb(53, 52, 52);
