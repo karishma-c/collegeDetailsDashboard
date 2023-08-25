@@ -1,0 +1,66 @@
+@import './../../styles/variables.css';
+
+.watchlistContainer {
+    background-color: var(--white-color);
+    width: 450px;
+    height: 100%;
+    margin: 10px 0 0 0;
+}
+.cardContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.watchlistCard {
+    width: 400px;
+    height: 280px;
+    background-color: var(--white-color);
+    border-radius: var(--card-border-radius);
+    border: 1px solid var(--border-color);
+    margin: 5px 15px;
+    padding: 20px 15px;
+}
+.collegeName, .satHeading, .actHeading, .achievementsHeading {
+    font-size: var(--font-small-1);
+    font-weight: var(--font-weight-semibold);
+    margin: 0;
+    padding: 0;
+}
+.satHeading, .actHeading, .achievementsHeading {
+    text-transform: capitalize;
+    font-weight: var(--font-weight-medium);
+}
+.city, .satValue, .actValue, .majorsValue, .achievementsValue {
+    font-size: var(--font-small);
+    font-weight: var(--font-weight-normal);
+    color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+}
+.majorsValue {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    border-radius: 30px;
+    padding: 5px 10px;
+    margin: 0 10px 0 0;
+}
+.achievementsValue {
+    font-size: var(--font-small-xs);
+    border: 1px solid var(--border-color);
+    border-radius: var(--card-border-radius);
+    padding: 5px 10px;
+    margin: 0 8px 5px 0;
+}
+.majors, .achievements {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.sat, .act, .specialization {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
