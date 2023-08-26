@@ -10,12 +10,15 @@
     margin: 0 0 0 30px;
     padding: 15px 10px;
     width: 800px;
+    /* height: 92vh; */
+    /* overflow-y: scroll; */
 }
 .heading {
     font-size: var(--font-medium);
     font-weight: var(--font-weight-medium);
     margin: 10px 0 0 10px;
     padding: 0;
+    color: var(--text-color);
 }
 .desc {
     font-size: var(--font-small-xs);
@@ -25,13 +28,14 @@
     padding: 0;
 }
 .collegeCardHeader, .containerHeader {
-    width: inherit;
+    width: 100%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
 }
 .addCollegeButton {
+    cursor: pointer;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -39,11 +43,13 @@
     border: 1px solid var(--secondary-color);
     font-size: var(--font-small-xs);
     padding: 5px 12px;
+    margin: 0 20px 0 0;
     background-color: var(--white-color);
+    color: var(--text-color);
 }
 .collegeCards {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: flex-start;
 }
@@ -61,19 +67,19 @@
 }
 .admission, .distance, .fees {
     margin: 0;
-    padding: 0;
+    padding: 0 0 5px 0;
 }
-#headerTickIcon, #addClgIcon {
+#headerTickIcon, #addClgIcon, #headerAddIcon {
     padding: 0 8px 0 0;
 }
 .collegeCard {
     cursor: pointer;
-    width: 230px;
-    height: 240px;
+    width: 220px;
+    height: 250px;
     background-color: var(--white-color);
     border-radius: var(--card-border-radius);
     border: 1px solid var(--border-color);
-    margin: 0 5px;
+    margin: 0 5px 5px 5px;
     padding: 20px 15px;
 }
 .collegeCard:hover {
@@ -84,6 +90,7 @@
     font-weight: var(--font-weight-semibold);
     margin: 0;
     padding: 0;
+    color: var(--text-color);
 }
 .colSat, .colAct {
     display: flex;
@@ -101,7 +108,7 @@
 .colSatHeading, .colActHeading, .admissionHeading, .distanceHeading, .feesHeading {
     font-weight: var(--font-weight-medium);
     padding: 0 0 2px 0;
-    color: var(--black-color);
+    color: var(--text-color);
 }
 .admissionHeading, .distanceHeading, .feesHeading {
     display: flex;

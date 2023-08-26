@@ -1,11 +1,11 @@
 import React from 'react';
 import './Modal.css'
 
-const Modal = ({ children}) => {
+const Modal = ({ children, closeModal, right }) => {
 
     return (
         <div className="modal">
-            <div className="modalContent" onClick={(e)=>e.stopPropagation()} >
+            <div className={`modal-content ${ right ? 'appear-right' :''} `} onClick={(e)=>e.stopPropagation()} >
               {children}
             </div>
         </div>

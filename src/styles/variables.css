@@ -5,8 +5,9 @@
     --tertiary-color: #eef4fe;
     --light-bg: #f4f3ff;
     --white-color: #ffffff;
-    --black-color: #000000;
+    --text-color: #333333;
     --tag-color: #806ae4;
+    --error-color: #ff7a7a;
     --font-size-xs: 12px;
     --font-small-xs: 14px;
     --font-small: 16px;
@@ -18,7 +19,7 @@
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
-    --button-border-radius: 10px;
+    --button-border-radius: 6px;
     --card-border-radius: 5px;
     --tag-border-radius: 30px;
 }

@@ -19,8 +19,8 @@ const Watchlist = () => {
                                     </div>
                                     <div className="headerOptions">
                                         {
-                                            collegeData.college_title === "University of Chivago" ?
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            collegeData.admit === false ?
+                                                <svg id="watchlistBin" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                                     <path d="M4 7l16 0" />
                                                     <path d="M10 11l0 6" />
@@ -29,16 +29,13 @@ const Watchlist = () => {
                                                     <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
                                                 </svg>
                                             : 
-                                            collegeData.college_title === "Ruglers University" ?
-                                                <div className="admitted">
-                                                    <svg id="tickIcon" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#806ae4" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                                       <path d="M5 12l5 5l10 -10" />
-                                                    </svg>
-                                                    <h4 className="admittedValue">{collegeData.admit}</h4>
-                                                </div>
-                                            :
-                                            ''    
+                                            <div className="admitted">
+                                                <svg id="tickIcon" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#806ae4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                    <path d="M5 12l5 5l10 -10" />
+                                                </svg>
+                                                <h4 className="admittedValue">Admitted</h4>
+                                            </div>    
                                         }
                                     </div>
                                 </div>

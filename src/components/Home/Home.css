@@ -7,7 +7,9 @@
     justify-content: flex-start;
     align-items: flex-start;
     max-width: 100%;
+    height: 100vh;
     max-height: 100%;
+    overflow: hidden;
 }
 .bodyContainer {
     display: flex;
@@ -15,18 +17,26 @@
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
+    height: 100%;
 }
 .innerContainer {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 .innerContainerRight {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
+    height: 92vh;
+    overflow-y: scroll;
+}
+.innerContainerTop {
+    margin: 10px 0 10px 30px;
+    background-color: var(--white-color);
+    /* height: 500px; */
 }
 .searchInputField {
     padding: 10px 8px;

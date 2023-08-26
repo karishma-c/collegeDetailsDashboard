@@ -8,7 +8,8 @@ var collegeData = [
         achievements: ['AI Scholar','Leadership'],
         admission_rate: "800",
         distance: "3.2",
-        tuition_fees: "$ 1500"
+        tuition_fees: "$ 1500",
+        admit: false
     },
     {
         college_title : "Ruglers University",
@@ -20,7 +21,7 @@ var collegeData = [
         admission_rate: "800",
         distance: "3.2",
         tuition_fees: "$ 1500",
-        admit: "Admitted"
+        admit: true
     },
     {
         college_title : "Gerogetown University",
@@ -31,7 +32,8 @@ var collegeData = [
         achievements: ['AI Scholar','Leadership'],
         admission_rate: "800",
         distance: "3.2",
-        tuition_fees: "$ 1500"
+        tuition_fees: "$ 1500",
+        admit: false
     }
 ]
 export default collegeData;

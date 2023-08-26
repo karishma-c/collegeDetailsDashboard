@@ -1,0 +1,91 @@
+@import './../../styles/variables.css';
+
+.addCollegeContainer {
+  padding:0;
+}
+.addCollegeheader {
+  margin: 0;
+  padding:10px 0 15px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.title {
+  font-size: var(--font-medium);
+  font-weight: var(--font-weight-medium);
+  margin: 0;
+  padding: 0;
+}
+.closeBtn {
+  cursor: pointer;
+}
+.form-element {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: space-between;
+  justify-content: flex-start;
+  margin:0 0 15px 0;
+}
+.form-element label {
+  margin: 0 0 8px 0;
+  font-size: var(--font-small);
+  font-weight: var(--font-weight-normal);
+  color: var(--black-color)
+}
+.form-element input , .form-element select{
+  padding:10px 0 10px 8px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--card-border-radius);
+}
+.form-element input {
+  width:100% ;
+  font-size: var(--font-small);
+}
+.form-element select{
+  width:100%;
+  color: var(--black-color);
+  background-color: var(--white-color);
+  font-size: var(--font-small);
+}
+.checkBoxGroup{
+  width:100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center
+}
+.checkBoxGroup label{
+  width:100%;
+  border:1px solid var(--border-color);
+  cursor:pointer;
+  padding:10px;
+  margin:0;
+}
+.checkBoxGroup input[type='checkbox']{
+  cursor:pointer;
+  width:fit-content;
+  margin:0 10px 0 0;
+}
+.addcollegeBtn {
+  margin: 10px 0 30px 0;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: var(--font-small);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--button-border-radius);
+  padding: 8px 12px;
+  border: none;
+  width: 100px;
+}
+.invalid {
+  border: 2px solid var(--error-color);
+}
+.field-error {
+  display: none;
+  font-size: 0.85em;
+  align-self: flex-start;
+  position: relative;
+  margin: 3px 0 0 0;
+  color: var(--error-color);
+}

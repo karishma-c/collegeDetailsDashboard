@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import data from './../../data';
 import Sidebar from './../Sidebar/Sidebar';
 import Search from "./../Search/Search";
 import Watchlist from "./../Watchlist/Watchlist";
@@ -18,10 +19,10 @@ const Home = () => {
                     <Watchlist />
                     <div className="innerContainerRight">
                         <div className="innerContainerTop">
-                           
+                           <LineChart />
                         </div>
                         <div className="innerContainerBottom">
-                           <CollegeCard />
+                           <CollegeCard data={data} />
                         </div>
                     </div>
                 </div>

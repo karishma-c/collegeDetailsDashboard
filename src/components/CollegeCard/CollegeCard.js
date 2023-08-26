@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import data from './../../data';
+import Modal from './../Modal/Modal';
+import AddCollegeForm from './../AddCollegeForm/AddCollegeForm';
 import './CollegeCard.css';
 
-const CollegeCard = () => {
+const CollegeCard = ({data}) => {
+
+    const[showFormModal, setShowFormModal] = useState(false);
+
+    const newFormData = (formData) => {
+       return data.push(formData);
+    };
+
+    const handleForm = () => {
+        setShowFormModal(!showFormModal);
+    }
 
     return (
         <div className="collegeCardContainer">
@@ -11,7 +23,7 @@ const CollegeCard = () => {
                     <h3 className="heading">Compare Colleges</h3>
                     <p className="desc">Drag and Drop colleges from watchlist to compare</p>
                 </div>
-                <button className="addCollegeButton">
+                <button className="addCollegeButton" onClick={handleForm}>
                     <svg id="addClgIcon" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="22" height="22" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                        <path d="M12 5l0 14" />
@@ -19,6 +31,12 @@ const CollegeCard = () => {
                     </svg>
                     Add College
                 </button>
+                {
+                    showFormModal &&
+                    <Modal closeModal={handleForm} right={'right'}>
+                       <AddCollegeForm closeModal={handleForm} newFormData={newFormData} />
+                    </Modal>
+                }
             </div>
             <div className="collegeCards">
                 {
@@ -33,7 +51,7 @@ const CollegeCard = () => {
                                     {
                                         collegeData.college_title === "University of Chivago" ?
                                             <div className="headerOptions">
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <svg id="headerAddIcon" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                                     <path d="M12 5l0 14" />
                                                     <path d="M5 12l14 0" />
