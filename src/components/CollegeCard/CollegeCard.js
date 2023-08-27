@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import data from './../../data';
 import Modal from './../Modal/Modal';
 import AddCollegeForm from './../AddCollegeForm/AddCollegeForm';
+import Slider from './../Slider/Slider';
 import './CollegeCard.css';
 
 const CollegeCard = ({data}) => {
@@ -48,34 +49,35 @@ const CollegeCard = ({data}) => {
                                        <h2 className="colName">{collegeData.college_title}</h2>
                                        <h3 className="colCity">2022 Public  {collegeData.city}</h3>
                                     </div>
-                                    {
-                                        collegeData.college_title === "University of Chivago" ?
-                                            <div className="headerOptions">
-                                                <svg id="headerAddIcon" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                                    <path d="M12 5l0 14" />
-                                                    <path d="M5 12l14 0" />
-                                                </svg>
-                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                                    <path d="M4 7l16 0" />
-                                                    <path d="M10 11l0 6" />
-                                                    <path d="M14 11l0 6" />
-                                                    <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
-                                                    <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
-                                                </svg>
-                                            </div>
-                                        : 
-                                        ''    
-                                    }
+                                    <div id="hideIcons" className="headerOptions">
+                                        <svg id="headerAddIcon" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M12 5l0 14" />
+                                            <path d="M5 12l14 0" />
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M4 7l16 0" />
+                                            <path d="M10 11l0 6" />
+                                            <path d="M14 11l0 6" />
+                                            <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                            <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                                        </svg>
+                                    </div>
                                 </div>
                                 <div className="colSat">
-                                    <h3 className="colSatHeading">SAT</h3>
-                                    <h4 className="colSatValue">{collegeData.sat}</h4>
+                                    <div className="colSatDetails">
+                                       <h3 className="colSatHeading">SAT</h3>
+                                       <h4 className="colSatValue">{collegeData.sat}</h4>
+                                    </div>
+                                    <Slider />
                                 </div>
                                 <div className="colAct">
-                                    <h3 className="colActHeading">ACT</h3>
-                                    <h4 className="colActValue">{collegeData.act}</h4>
+                                    <div className="colActDetails">
+                                       <h3 className="colActHeading">ACT</h3>
+                                       <h4 className="colActValue">{collegeData.act}</h4>
+                                    </div>
+                                    <Slider />
                                 </div>
                                 <div className="additionalDetails">
                                     <div className="admission">

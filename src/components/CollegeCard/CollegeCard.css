@@ -10,13 +10,11 @@
     margin: 0 0 0 30px;
     padding: 15px 10px;
     width: 800px;
-    /* height: 92vh; */
-    /* overflow-y: scroll; */
 }
 .heading {
     font-size: var(--font-medium);
     font-weight: var(--font-weight-medium);
-    margin: 10px 0 0 10px;
+    margin: 0 0 0 5px;
     padding: 0;
     color: var(--text-color);
 }
@@ -46,6 +44,9 @@
     margin: 0 20px 0 0;
     background-color: var(--white-color);
     color: var(--text-color);
+}
+.addCollegeButton:hover {
+    background-color: var(--hover-color-1);
 }
 .collegeCards {
     display: flex;
@@ -85,6 +86,12 @@
 .collegeCard:hover {
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .1);;
 }
+#hideIcons {
+    opacity: 0;
+}
+.collegeCard:hover  #hideIcons {
+    opacity: 1;
+}
 .colName, .colSatHeading, .colActHeading {
     font-size: var(--font-small-xs);
     font-weight: var(--font-weight-semibold);
@@ -93,6 +100,12 @@
     color: var(--text-color);
 }
 .colSat, .colAct {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.colSatDetails, .colActDetails {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -109,6 +122,9 @@
     font-weight: var(--font-weight-medium);
     padding: 0 0 2px 0;
     color: var(--text-color);
+}
+.additionalDetails {
+    padding: 10px 0 0 0;
 }
 .admissionHeading, .distanceHeading, .feesHeading {
     display: flex;
@@ -132,3 +148,64 @@
     margin: 0 0 10px 0;
 }
 
+@media (max-width:1040px) {
+    
+    .collegeCardContainer {
+        width: 550px;
+    }
+
+}
+
+@media (max-width:980px) {
+    
+    .collegeCardContainer {
+        width: 540px;
+        margin: 0 0 0 15px;
+    }
+
+}
+
+@media (max-width:780px) {
+    .collegeCardContainer {
+        width: 350px;
+        margin: 0 0 0 15px;
+    }
+    .heading {
+        font-size: var(--font-small);
+    }
+    .desc {
+        max-width: 200px;
+        font-size: var(--font-size-xs);
+    }
+    .addCollegeButton {
+        justify-content: flex-start;
+        font-size: var(--font-size-xs);
+        padding: 4px;
+        margin: 0;
+    }
+    #addClgIcon, #headerAddIcon {
+        padding: 0 2px 0 0;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .collegeCardContainer {
+        width: 300px;
+        margin: 10px auto;
+    }
+    .collegeCards {
+        justify-content: center;
+    }
+    .heading {
+        font-size: var(--font-small-xs);
+    }
+    .desc {
+        max-width: 200px;
+        font-size: var(--font-size-xs);
+    }
+    .addCollegeButton {
+        font-size: var(--font-size-xs);
+        padding: 4px;
+        margin: 0;
+    }
+}

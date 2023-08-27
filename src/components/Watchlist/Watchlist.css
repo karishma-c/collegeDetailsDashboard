@@ -93,7 +93,13 @@
     justify-content: flex-start;
     align-items: flex-start;
 }
-.sat, .act, .specialization {
+.sat, .act {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.satDetails, .actDetails, .specialization {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -112,4 +118,60 @@
 }
 #tickIcon {
     padding: 0 5px 0 0;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--border-color); 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color); 
+}
+
+@media (max-width:780px) {
+    
+    .watchlistContainer {
+        width: 300px;
+        padding: 10px;
+        height: 94vh;
+    }
+    .watchlistCard {
+        width: 240px;
+        height: 230px;
+        margin: 0 0 10px 0;
+    }
+    .satHeading, .actHeading, .achievementsHeading {
+        font-size: var(--font-small-xs);
+    }
+    .city, .satValue, .actValue, .majorsValue, .achievementsValue {
+        font-size: var(--font-size-xs);
+    }
+
+}
+
+@media (min-width:300px) and (max-width:500px) {
+    
+    .watchlistContainer {
+        width: 300px;
+        overflow-x: scroll;
+        height: 100%;
+        padding: 10px 0 10px 10px;
+    }
+    .cardContainer {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .watchlistCard {
+        width: 300px !important;
+        height: 230px;
+        margin: 0 5px 10px 0;
+    }
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import data from './../../data';
+import Slider from './../Slider/Slider';
 import './Watchlist.css';
 
 const Watchlist = () => {
@@ -49,12 +50,18 @@ const Watchlist = () => {
                                     }
                                 </div>
                                 <div className="sat">
-                                    <h3 className="satHeading">SAT</h3>
-                                    <h4 className="satValue">{collegeData.sat}</h4>
+                                    <div className="satDetails">
+                                       <h3 className="satHeading">SAT</h3>
+                                       <h4 className="satValue">{collegeData.sat}</h4>
+                                    </div>
+                                    <Slider />
                                 </div>
                                 <div className="act">
-                                    <h3 className="actHeading">ACT</h3>
-                                    <h4 className="actValue">{collegeData.act}</h4>
+                                    <div className="actDetails">
+                                       <h3 className="actHeading">ACT</h3>
+                                       <h4 className="actValue">{collegeData.act}</h4>
+                                    </div>
+                                    <Slider />
                                 </div>
                                 <div className="specialization">
                                     <h3 className="achievementsHeading">SPECIALITIES</h3>
