@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import data from './../../data';
 import Modal from './../Modal/Modal';
 import AddCollegeForm from './../AddCollegeForm/AddCollegeForm';
@@ -8,6 +8,7 @@ import './CollegeCard.css';
 const CollegeCard = ({data}) => {
 
     const[showFormModal, setShowFormModal] = useState(false);
+    const [screenSize, setScreenSize] = useState(window.innerWidth);
 
     const newFormData = (formData) => {
        return data.push(formData);
@@ -16,6 +17,17 @@ const CollegeCard = ({data}) => {
     const handleForm = () => {
         setShowFormModal(!showFormModal);
     }
+
+    const setDimension = () => {
+        setScreenSize(window.innerWidth);
+    };
+    
+    useEffect(() => {
+    window.addEventListener("resize", setDimension);
+    return () => {
+        window.removeEventListener("resize", setDimension);
+    };
+    }, [screenSize]);
 
     return (
         <div className="collegeCardContainer">
@@ -34,7 +46,8 @@ const CollegeCard = ({data}) => {
                 </button>
                 {
                     showFormModal &&
-                    <Modal closeModal={handleForm} right={'right'}>
+                    <Modal closeModal={handleForm} {...(screenSize <= 480 ? { mobileModal: true }
+                        : { right: "right" })}>
                        <AddCollegeForm closeModal={handleForm} newFormData={newFormData} />
                     </Modal>
                 }
